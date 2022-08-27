@@ -31,3 +31,10 @@ var allcat = document.getElementById('brand1').addEventListener('click',()=>{
 });
 
 //END Navbar dropdown categories
+
+//START FOOTER SECTION
+const dates = document.getElementById('year');
+let years = new Date().getUTCFullYear();
+dates.textContent = years;
+
+//END FOOTER SECTION
