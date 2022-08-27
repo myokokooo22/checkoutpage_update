@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zenax</title>
+    <!--Bootstrap css1 js1-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--fontawesome css1-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--custom css-->
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/> 
+</head>
+<body>
+    <!--START HEADER-->
+        <!--start search box-->
+    <section>
+        <div class="container-fluid searchbgs  d-sm-block d-lg-none">
+            <div class="row">
+                <button type="button" id="closebtn" class="btn rounded-0 xmarks"><i class="fa-solid fa-xmark fa-2x"></i></button>
+                <div class="input-group searchs-group">
+                    <input type="text" id="inseach" name="insearch" class="form-control rounded-0 searchs" placeholder="Search"/>
+                    <button type="submit" id="insearch" name="insearch" class="btn-lg btn btn-oranges" value="Search">Search</button>
+                </div>
+            </div>
+       </div>
+       </section>
+    <!--end search box-->
+
+
+        <!--start address bar-->
+            <section>
+                <nav class="navbar navbar-white navbar-expand navs">
+                    <div class="container-fluid d-flex justify-content-center">
+                        <div class="row">
+                            <!--first block-->
+                            <div class="col-lg-8 col-md-12 mb-3 my-3 me-auto">
+                                <ul class="navbar-nav text-secondary nav-firsts">
+                                    <li class="navbar-item d-flex align-items-center menus"><i class="fa-solid fa-phone mx-3"></i> <span class="mx-2">+959974875657</span></li>
+                                    <li class="navbar-item d-flex align-items-center menus"><i class="fa-solid fa-location-dot mx-3"></i> <span class="mx-2">Store Location</span></li>
+                                    <div class="d-lg-flex d-none ">
+                                        <span class="d-flex align-items-center mx-3"><i class="fa-solid fa-location-crosshairs"></i></span>
+                                        <li class="navbar-item"><input type="text" class="form-control inputs" placeholder="Track Your Order"/></li>                        
+                                    </div>
+                              </ul>   
+                            </div>
+
+                             <!--second block-->
+                            <div class="col-lg-4 col-md-12 mb-3 my-3 me-auto ">
+                                <ul class="navbar-nav text-secondary nav-secs">
+                                    <li class="navbar-item d-flex align-items-center menus"><i class="fa-solid fa-user mx-2"></i> <span class="mx-3 hide">My Account</span></li>
+                                    <li class="navbar-item d-flex align-items-center mx-3 menus">
+                                        <select class="selects">
+                                            <option selected>&#36; USD</option>
+                                            <option>&#163; EUR</option>
+                                            <option>&#165; JPY</option>
+                                            <option>&#165; RMB</option>
+                                        </select>
+                                    </li>
+                                    <li class="navbar-item d-flex align-items-center my-2 menus"><i class="fa-solid fa-circle-info mx-2"></i> Help</li>
+                              </ul>   
+                            </div>
+
+                        </div>
+                    </div>     
+                    </div>
+                </nav>
+            </section>
+        <!--end address bar-->
+
+        <!--start search category-->
+           <section class="d-none d-lg-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3 class="display-3 mt-2">Zenax</h3>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="input-group my-3">
+                            
+                                <div class="input-group-prepend">
+                                    <input type="text" class="form-control rounded-0 searchs" placeholder="Search Product"/>
+                                </div>
+                              
+                                <div id="catedropdown" class="cates">Choose Categories <i class="fa-solid fa-chevron-down"></i></div>
+                                  <!--dropdown for all categories-->
+                                    <div class="cate-categories" id="cates-main-section">
+                                        <ul class="list-group cate-categories-content">
+                                            <li  class="list-group-item p-3">All Categories</li>
+                                            <li  class="list-group-item p-3">Price Categories</li>
+                                            <li  class="list-group-item p-3">Feature Categories</li>
+                                            <li  class="list-group-item p-3">Product Categories</li>
+                                        </ul>
+
+                                    </div>
+
+                                <div class="input-group-append">
+                                    <button type="submit" id="search" name="seach" class="btn-lg btn btn-oranges" value="Search">Search</button>
+                                </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 my-5 ms-auto">
+                        <div class="d-flex align-items-center">
+                            <div class="favitems mx-3">
+                                <i class="fa-regular fa-heart"></i>
+                                <span class="badge badges">23</span>
+                            </div>
+    
+                            <div class="favitems mx-3">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span class="badge badges">19</span>
+                            </div>
+    
+                            <span class="mx-3">$ <span id="totalvalue" class="">155.00</span> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </section>
+        <!--end search category-->
+
+        <!--start navbar-->
+           <nav class="navbar navbar-expand-lg navbar-dark bg-oranges mt-sm-5 mt-lg-0">
+            <a href="#" id="brand1" class="navbar-brand text-uppercase mx-5 d-none d-lg-block brandnames"><i class="fa-solid fa-bars-staggered"></i> 
+                All Category <i class="fa-solid fa-chevron-down"></i></a>
+                
+            <a href="#" id="brand2" class="navbar-brand text-uppercase text-white mx-5 d-none d-sm-block brandnameszenax">Zenax</a>
+
+            <!--dropdown all category-->
+            <div id="dropdown-categories" class="dropdown-categories">
+                <ul class="list-group my-4 dropdown-categories-content ">
+                    <li class="list-group-item p-3"><i class="fa-solid fa-computer"></i> Computer and Offices</li>
+                    <li class="list-group-item p-3"><i class="fa-solid fa-couch"></i> Home & Funitures</li>
+                    <li class="list-group-item p-3"><i class="fa-solid fa-mobile"></i> Mobiles and Tablets</li>
+                    <li class="list-group-item p-3"><i class="fa-solid fa-futbol"></i> Sports & Outdoors</li>
+                    <li class="list-group-item p-3"><i class="fa-solid fa-heart-pulse"></i> Beauty & Health</li>
+                    <li class="list-group-item p-3"><i class="fa-solid fa-radio"></i> Radio & TV</li>
+                </ul>
+            </div>
+            
+            <div class="d-flex justify-content-between ms-auto d-lg-none d-sm-flex">
+                <div class="favitems mx-3">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="badge badges">23</span>
+                </div>
+    
+                <div class="favitems mx-3">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge badges">19</span>
+                </div>
+
+                <div class="mx-3">
+                   <span id="minisearch"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+            </div>
+
+            <button type="button" class="navbar-toggler cross" data-bs-target="#nav" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+                <div id="nav" class="navbar-collapse collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-2">
+                           <div class="dropdown-menus">
+                            <a href="#" class="nav-link text-white">Home <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="list-group text-uppercase dropdown-menus-contents">
+                               <li class="list-group-item"><a href="#"> Home1</a></li>
+                               <li class="list-group-item"><a href="#"> Home2</a></li>
+                               <li class="list-group-item"><a href="#"> Home3</a></li>   
+                            </ul>
+                           </div>
+                        </li>
+                        <li class="nav-item mx-2"><a href="#" class="nav-link text-white">Shop</a></li>
+                        <li class="nav-item mx-2"><a href="#" class="nav-link text-white">Products</a></li>
+                        <li class="nav-item mx-2">
+                            <div class="dropdown-menus">
+                             <a href="#" class="nav-link text-white">Pages <i class="fa-solid fa-chevron-down"></i></a>
+                             <ul class="list-group text-uppercase dropdown-menus-contents">
+                                <li class="list-group-item"><a href="#"> Checkout</a></li>
+                                <li class="list-group-item"><a href="#"> Compare Products</a></li>
+                                <li class="list-group-item"><a href="#"> Whistlists</a></li>   
+                             </ul>
+                            </div>
+                         </li>
+                        <li class="nav-item mx-2"><a href="#" class="nav-link text-white">Cart</a></li>
+                    </ul>
+
+                    <span class="ms-auto mx-5 d-lg-block d-sm-none">Free Shipping on Orders $30+</span>
+                </div>
+           </nav>
+        <!--end navbar-->
+
+        <!--start breadcrumb-->
+           <div class="container-fluid bg-light mb-5">
+                <div class="container">
+                    <div class="row py-2">
+                        <div class="col-12">
+                            <ul class="breadcrumb my-2">
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Shop</a></li>
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Payment</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        <!--end breadcrumb-->
+        
+    <!--END HEADER-->
+    
+    <!--START FORM-->
+           <section class="mb-3">
+                <div class="container forms">
+                    <h3 class="p-4">Payment Details</h3>
+                    <form action="" method="" class="mx-5">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="payment-option border-top mb-3 py-2">
+                                    <input type="radio" name="paypal" id="paypal"/>
+                                    <label for="paypal">                                     
+                                        <img src="./assets/img/favs/paypal.png" class="paypalimgs" alt="paypal"/>
+                                    </label>                                  
+                                </div>
+
+                                <div class="payment-option border-top mb-3 py-2">
+                                    <input type="radio" name="creditcard" id="creditcard"/>
+                                    <label for="creditcard"> Credit Card</label>
+                                </div>
+
+                                <div class="mb-3">
+                                    <ul class="currencyarea">
+                                        <li><a href="#"><img src="./assets/img/favs/mastercard.png" alt="mastercard"/></a></li>
+                                        <li><a href="#"><img src="./assets/img/favs/visa.png" alt="mastercard"/></a></li>
+                                        <li><a href="#"><img src="./assets/img/favs/pio.png" alt="mastercard"/></a></li>
+                                        <li><a href="#"><img src="./assets/img/favs/discover.png" alt="mastercard"/></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" name="fullname" id="fullname" class="form-control py-2"/>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="fullname">Card Number</label>
+                            <input type="password" name="password" id="password" class="form-control py-2"/>
+                        </div>
+
+                        <div class="row mb-3 py-3">
+                            <div class="col-md-4 col-sm-6">
+                                <div>
+                                    <label>Expire Date</label>
+                                </div>
+                                <div>
+                                <select class="form-select">
+                                    <option selected>January</option>
+                                    <option>February</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
+                                </select>
+                               </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6 mb-3">
+                                <div>
+                                    <label>Year</label>
+                                </div>
+                                <div>
+                                <select class="form-select">
+                                    <option selected>Select year</option>
+                                    <option>2024</option>
+                                    <option>2023</option>
+                                    <option>2022</option>
+                                    <option>2021</option>
+                                    <option>2020</option>
+                                    <option>2019</option>
+                                </select>
+                               </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6 mb-3">
+                                <div>
+                                    <label>CVV</label>
+                                </div>
+                                <div>
+                                <input type="text" name="cvv" id="cvv" class="form-control"/>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="payment-option border-top mb-3 py-3">
+                                <input type="radio" name="cod" id="cod"/>
+                                <label for="cod"> Cash on Delivery</label>
+                            </div>
+                        </div>
+
+                        <div class="row py-3">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-end">
+                                    <button type="button" id="checkout" name="checkout" class="btn btn-warning btn-lg rounded-0">Checkout</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>                     
+                    </form>
+              </div>
+           </section>
+    <!--END FORM-->
+
+    <!--START FOOTER-->
+           <footer class="bg-dark text-light py-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-12">
+                        <h4 class="mx-4">Zenax</h4>
+                        <span class="small text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+
+                        <div class="mt-5">
+                            <h3 class="mb-2 mx-2">Contact Us</h3>
+                            <div class="d-flex mb-3">
+                                <div><i class="fa-solid fa-location-dot mx-3"></i></div>
+                                <div><span>No.3, Bogyoke Aung San Road, Pabedan Township, Yangon, Myanmar.</span></div>
+                            </div>
+
+                            <div class="d-flex mb-3">
+                                <div><i class="fa-solid fa-phone mx-3"></i></div>
+                                <div><span>09-974875657</span></div>
+                            </div>
+
+                            <div class="d-flex mb-3">
+                                <div><i class="fa-solid fa-envelope mx-3"></i></div>
+                                <div><span>zenaxshopping@gmail.com</span></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 col-sm-12">
+                        <div class="row mb-3">
+                            <div class="col-lg-8 col-sm-12">
+                                <h4>Signup for Newsletters.</h4>
+                                <div class="input-group">
+                                    <input type="text" id="newsletter" name="newsletter" class="form-control py-2" placeholder="Email Address" autocomplete="off"/>
+                                    <button type="button" id="subscribe" name="subscribe" class=" btn btn-danger">Subscribe</button>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-12">
+                                <h4 class="text-center">Follow Us</h4>
+                                <div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row mb-3 border-top">
+                            <div class="col-lg-4 col-sm-12">
+                                 <h4>Informations</h4>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-12">
+                                <h4>Categories</h4>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-12">
+                                <h4>Extras</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </footer>
+    <!-- END FOOTER  -->
+    <!--Bootstrap css1 js1-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!--custom js-->
+    <script src="./js/app.js" type="text/javascript"></script>    
+</body>
+</html>
