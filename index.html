@@ -10,9 +10,13 @@
     <link href="./css/style.css" rel="stylesheet" type="text/css"/> 
 </head>
 <body>
+    <!--Start Float Button-->
+           <a href="#home" id="float-button" class="float-button"><i class="fa-solid fa-angle-up"></i></a> 
+    <!--End Float Button-->
+
     <!--START HEADER-->
         <!--start search box-->
-    <section>
+    <section id="home">
         <div class="container-fluid searchbgs  d-sm-block d-lg-none">
             <div class="row">
                 <button type="button" id="closebtn" class="btn rounded-0 xmarks"><i class="fa-solid fa-xmark fa-2x"></i></button>
@@ -345,6 +349,11 @@
                                 <div><span>zenaxshopping@gmail.com</span></div>
                             </div>
 
+                            <div class="d-flex mb-3">
+                                <img src="./assets/img/favs/googleplay.png" class="mx-3 mb-3" alt="googleplay" />
+                                <img src="./assets/img/favs/appstore.png" alt="appstore" height="45px"/>
+                            </div>
+
                         </div>
                     </div>
 
@@ -360,8 +369,12 @@
 
                             <div class="col-lg-4 col-sm-6">
                                 <h4 class="text-center">Follow Us</h4>
-                                <div>
-
+                                <div class="d-flex justify-content-center my-3 linkgroups">
+                                    <a href="#" class="nav-link mx-2 linkgroups-items"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" class="nav-link mx-2 linkgroups-items"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#" class="nav-link mx-2 linkgroups-items"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" class="nav-link mx-2 linkgroups-items"><i class="fa-solid fa-envelope"></i></a>
+                                    <a href="#" class="nav-link mx-2 linkgroups-items"><i class="fa-brands fa-linkedin-in"></i></a>
                                 </div>
 
                             </div>
@@ -408,8 +421,16 @@
            </footer>
 
            <footer>         
-            <div class="container-fluid bg-light text-center py-2">
-                <h6 class="text-dark">Zenax Online &copy; <span id="year" class="text-warning">1999</span></h6>
+            <div class="container-fluid bg-light text-center py-3">
+                <h5 class="text-dark">Zenax Online &copy; <span id="year" class="text-warning"></span></h5>
+                <div class="d-flex justify-content-center">
+                    <ul class="currencyarea">
+                        <li><img src="./assets/img/favs/mastercard.png" alt="mastercard"/></li>
+                        <li><img src="./assets/img/favs/visa.png" alt="visa"/></li>
+                        <li><img src="./assets/img/favs/pio.png" alt="pio"/></li>
+                        <li> <img src="./assets/img/favs/paypal.png" alt="paypal"/></li>
+                    </ul>
+                </div>
             </div>
            </footer>
     <!-- END FOOTER  -->

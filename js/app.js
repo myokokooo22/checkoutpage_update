@@ -38,3 +38,16 @@ let years = new Date().getUTCFullYear();
 dates.textContent = years;
 
 //END FOOTER SECTION
+
+const floatbtn = document.querySelector('.float-button');
+console.log(floatbtn);
+window.addEventListener('scroll',()=>{
+    // console.log(window.scrollY);
+    const getscrolly = window.scrollY;
+
+    if(getscrolly >= 350){
+        floatbtn.style.display = 'block';
+    }else{
+        floatbtn.style.display = 'none';
+    }
+});

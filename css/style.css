@@ -377,4 +377,77 @@ body{
 .footer-menus-contents .list-group-item a:hover{ 
     color: var(--color1);
 }
+
+.linkgroups .linkgroups-items{
+    padding: 7px 12px;
+    background-color: #f4f4f4;
+    color: #777;
+    border-radius: 8px;
+    
+    transition: color 0.3s ease;
+}
+
+.linkgroups .linkgroups-items:nth-child(1):hover{
+    border: 1px solid blue;
+    color: blue;
+}
+
+.linkgroups .linkgroups-items:nth-child(2):hover{
+    border: 1px solid palevioletred;
+    color: palevioletred;
+}
+
+.linkgroups .linkgroups-items:nth-child(3):hover{
+    border: 1px solid skyblue;
+    color: skyblue;
+}
+
+.linkgroups .linkgroups-items:nth-child(4):hover{
+    border: 1px solid red;
+    color: red;
+}
+
+.linkgroups .linkgroups-items:nth-child(5):hover{
+    border: 1px solid steelblue;
+    color: steelblue;
+}
 /* END FOOTER  */
+
+/* Start Float Button  */
+.float-button{
+    background-color: var(--color1);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50px;
+
+    position: fixed;
+    right: 9px;
+    bottom: 9px;
+    z-index: 100;
+
+    display: none;
+}
+
+.fa-angle-up{
+   color: white;
+   position: absolute;
+   top: 20px;
+   right: 18px;
+
+   animation: myani01 0.8s ease infinite ;
+}
+
+@keyframes myani01 {
+    from{
+       opacity: 0;
+       top: 30px;
+    }
+
+    to{
+        opacity: 1;
+        top: 15px;
+    }
+}
+/* End Float Button  */
